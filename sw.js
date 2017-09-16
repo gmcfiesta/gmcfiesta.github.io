@@ -59,7 +59,7 @@ toolbox.precache([
     'mytemplate.js',
     
     'index-offline.html',
-    'index-offline.css'
+    'index-offline.css',
     'index-offline.js',
     
     
