@@ -132,7 +132,7 @@
     <ul>
       <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">people</i></a></li>
       <li class="waves-effect waves-light"><a href="index.html"><i class="material-icons">home</i></a></li>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">free_breakfast</i></a></li>
+      <li class="waves-effect waves-light"><a href="#!" id="notif" class="btn"><i class="material-icons">notifications</i></a></li>
     </ul>
   </div>
      
@@ -142,5 +142,20 @@
       <script type="text/javascript" src="mytemplate.js"></script>
         <script type="text/javascript" src="index.js"></script>
         <script src="companion.js" data-service-worker="/sw.js"></script>
+        <script src="js/notification.js"></script>
+        
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAY_fbikXdhD81nNol13-EyvPb2WUT0uqg",
+    authDomain: "gmcfiesta.firebaseapp.com",
+    databaseURL: "https://gmcfiesta.firebaseio.com",
+    projectId: "gmcfiesta",
+    storageBucket: "",
+    messagingSenderId: "793124344038"
+  };
+  firebase.initializeApp(config);
+</script>
     </body>
   </html>
