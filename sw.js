@@ -70,7 +70,7 @@ toolbox.precache([
     '/fb.png',
     '/insta.jpg',
     '/youtube.png',
-    '/pics',
+    
     '/pics/akhil.jpg',
     '/pics/anjani.jpg',
     '/pics/arthi.jpg',
