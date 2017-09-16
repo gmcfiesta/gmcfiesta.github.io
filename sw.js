@@ -23,14 +23,7 @@ toolbox.precache([
     '/js/materialize.min.js',
     
     
-    '/swiper/css',
-    '/swiper/css/swiper.css',
-    '/swiper/css/swiper.min.css',
-    '/swiper/js',
-    '/swiper/js/swiper.js',
-    '/swiper/js/swiper.jquery.js',
-    '/swiper/js/swiper.min.js',
-    '/swiper/js/swiper.jquery.min.js',
+   
     
    
     
@@ -93,7 +86,7 @@ toolbox.precache([
     '/pics/lohith.jpg',
     
     
-    '/offline',
+    
     '/offline.png',
     
     
