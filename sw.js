@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
 
 
 toolbox.precache([
-    '/'
+    '/',
     '/about.html',
     '/about.css',
     '/about.js',
