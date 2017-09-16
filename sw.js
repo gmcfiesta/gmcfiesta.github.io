@@ -76,6 +76,20 @@ toolbox.precache([
     'fb.png',
     'insta.png',
     'youtube.png',
+    'pics/',
+    'pics/akhil.jpg',
+    'anjani.jpg',
+    'arthi.jpg',
+    'bhanu.jpg',
+    'chaitanya.jpg',
+    'chandana.jpg',
+    'chiluka.jpg',
+    'giri.jpg',
+    'gvk.jpg',
+    'harsha.jpg',
+    'kaveri.jpg',
+    'kunal.jpg',
+    'lohith.jpg',
     
     
     '/offline',
@@ -92,7 +106,7 @@ toolbox.precache([
 self.toolbox.router.get('/(.*)', function(request, values, options) {
    return toolbox.networkFirst(request, values, options).catch(function(error) {
         if (req.method === 'GET' && req.headers.get('accept').includes('text/html')) {
-            return toolbox.cacheOnly(new Request('/offline'), vals, opts);
+            return toolbox.cacheOnly(new Request('index-offline.html'), vals, opts);
         }
         throw error;
     });
