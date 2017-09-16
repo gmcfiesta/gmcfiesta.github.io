@@ -1,6 +1,6 @@
 {
     "name": "GMC Fiesta",
-    "short_name": "Fest Fiest",
+    "short_name": "Fest Fiesta",
     "start_url": "/index.html",
     "scope": "/",
     "display": "standalone",
