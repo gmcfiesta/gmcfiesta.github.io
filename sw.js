@@ -32,7 +32,7 @@ toolbox.precache([
     '/swiper/js/swiper.min.js',
     '/swiper/js/swiper.jquery.min.js',
     
-    '/sw-toolbox.js',
+   
     
     '/audi.html',
     '/audi.css',
