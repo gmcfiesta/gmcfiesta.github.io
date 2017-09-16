@@ -1,0 +1,43 @@
+{
+    "short_name": "Fest Fervour",
+    "name": "GMC Fest Fervour",
+    "description": "A progressive web app for GMC Fest 2017",
+     "icons": [
+        {
+              "src": "android-icon-48x48.png",
+              "type": "image/png",
+              "sizes": "48x48"
+            },
+            {
+              "src": "android-icon-96x96.png",
+              "type": "image/png",
+              "sizes": "96x96"
+            },
+            {
+              "src": "android-icon-72x72.png",
+              "type": "image/png",
+              "sizes": "72x72"
+            },
+            {
+              "src": "android-icon-144x144.png",
+              "type": "image/png",
+              "sizes": "144x144"
+            },
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }],
+    "start_url": "./index.html",
+    "dsiplay": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#00FFFF",
+    "background-color": "#00FFFF"
+    
+    
+    
+    
+    
+    
+    
+}

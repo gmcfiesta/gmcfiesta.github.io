@@ -1,0 +1,121 @@
+<!--Lock
+        <div class="preloader-background">
+	<div class="preloader-wrapper big active">
+		<div class="spinner-layer spinner-blue-only">
+			<div class="circle-clipper left">
+				<div class="circle"></div>
+			</div>
+			<div class="gap-patch">
+				<div class="circle"></div>
+			</div>
+			<div class="circle-clipper right">
+				<div class="circle"></div>
+			</div>
+		</div>
+	</div>
+</div>       
+        -->
+              
+              
+              
+              
+              
+              
+/*---guess what-----
+window.setInterval(function() {
+
+  var current = new Date();
+  var expiry = new Date("January 19, 2016 17:39:00")
+
+  if (current.getTime() > expiry.getTime()) {
+    $('.houdini').hide();
+
+  } else if (current.getTime() < expiry.getTime()) {
+    $('.houdini').show();
+  }
+
+}, 0);
+-------*/
+
+
+/*---------
+document.addEventListener("DOMContentLoaded", function(){
+	$('').delay(1700).fadeOut('slow');
+	
+	$('.preloader-wrapper')
+		.delay(1700)
+		.fadeOut();
+});
+-------*/
+
+/*-----get time--
+
+function time(){
+    var loc = '35.731252, 139.730291' // Tokyo expressed as lat,lng tuple
+var targetDate = new Date() // Current date/time of user computer
+var timestamp = targetDate.getTime()/1000 + targetDate.getTimezoneOffset() * 60 // Current UTC date/time expressed as seconds since midnight, January 1, 1970 UTC
+var apikey = 'AIzaSyB16Wyb3o5--brzXjDdLqIvURY4SN45zxk'
+var apicall = 'https://maps.googleapis.com/maps/api/timezone/json?location=' + loc + '&timestamp=' + timestamp + '&key=' + apikey
+ 
+var xhr = new XMLHttpRequest() // create new XMLHttpRequest2 object
+xhr.open('GET', apicall) // open GET request
+xhr.onload = function(){
+    if (xhr.status === 200){ // if Ajax request successful
+        var output = JSON.parse(xhr.responseText) // convert returned JSON string to JSON object
+        console.log(output.status) // log API return status for debugging purposes
+        if (output.status == 'OK'){ // if API reports everything was returned successfully
+            var offsets = output.dstOffset * 1000 + output.rawOffset * 1000 // get DST and time zone offsets in milliseconds
+            var localdate = new Date(timestamp * 1000 + offsets) // Date object containing current time of Tokyo (timestamp + dstOffset + rawOffset)
+            console.log(localdate.toLocaleString()) // Display current Tokyo date and time
+            window.localdate= localdate;
+        }
+    }
+    else{
+        alert('Request failed.  Returned status of ' + xhr.status)
+    }
+}
+xhr.send() // send request
+
+               }
+
+--*/
+
+/*-----launch----*/
+window.setInterval(function() {
+
+  var current = localdate ();
+  var expiry = new Date('2015-12-03T02:00:00.000-08:00')
+
+  if (current.getTime() > expiry.getTime()) {
+    $('.preloader-background').hide();
+    $('.preloader-wrapper').hide();
+    
+  } else if (current.getTime() < expiry.getTime()) {
+    $('.preloader-background').show();
+    $('.preloader-wrapper').show();
+   
+
+}, 3000);
+
+
+
+
+
+
+
+
+
+
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	
+	position: fixed;
+	z-index: 100000000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+}

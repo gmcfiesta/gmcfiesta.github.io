@@ -1,0 +1,33 @@
+body, .navbar-fixed, #slide-out, .container {
+    
+    background-color: darkcyan;
+    
+}
+
+card {
+    background-color: darkslategrey !important;
+}
+
+
+.tabs .tab {
+    background-color: darkslategray;
+    
+    
+}
+
+
+.tabs .tab a {
+    color: white !important;
+    font-size: 20px; 
+}
+
+
+.tabs .tab a.active {
+    color: white !important;
+     
+}
+
+table.centered tbody tr{
+    font-size: 20px !important;
+}
+
