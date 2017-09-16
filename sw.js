@@ -24,7 +24,7 @@ toolbox.precache([
     
     'swiper/css',
     'swiper/css/swiper.css',
-    'swiper/css/swiper.min.css'
+    'swiper/css/swiper.min.css',
     'swiper/js',
     'swiper/js/swiper.js',
     'swiper/js/swiper.jquery.js',
