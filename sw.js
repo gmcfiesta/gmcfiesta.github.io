@@ -55,7 +55,7 @@ toolbox.precache([
     '/sports.js',
     
     
-    '/mytemplate.html',
+    
     '/mytemplate.css',
     '/mytemplate.js',
     
@@ -72,12 +72,12 @@ toolbox.precache([
     '/rsc/16.png',
     '/rsc/17.png',
     '/images/yuna.jpg',
-    '/images/office.jpg',
+    '/images/office.png',
     '/images/yuna-2.png',
     '/fb.png',
-    '/insta.png',
+    '/insta.jpg',
     '/youtube.png',
-    '/pics/',
+    '/pics',
     '/pics/akhil.jpg',
     '/pics/anjani.jpg',
     '/pics/arthi.jpg',
