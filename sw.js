@@ -24,7 +24,7 @@ toolbox.precache([
     
     'swiper/css',
     'swiper/css/swiper.css',
-    'swiper/css/swiper.min.css'
+    'swiper/css/swiper.min.css',
     'swiper/js',
     'swiper/js/swiper.js',
     'swiper/js/swiper.jquery.js',
@@ -59,7 +59,7 @@ toolbox.precache([
     'mytemplate.js',
     
     'index-offline.html',
-    'index-offline.css'
+    'index-offline.css',
     'index-offline.js',
     
     
@@ -78,18 +78,18 @@ toolbox.precache([
     'youtube.png',
     'pics/',
     'pics/akhil.jpg',
-    'anjani.jpg',
-    'arthi.jpg',
-    'bhanu.jpg',
-    'chaitanya.jpg',
-    'chandana.jpg',
-    'chiluka.jpg',
-    'giri.jpg',
-    'gvk.jpg',
-    'harsha.jpg',
-    'kaveri.jpg',
-    'kunal.jpg',
-    'lohith.jpg',
+    'pics/anjani.jpg',
+    'pics/arthi.jpg',
+    'pics/bhanu.jpg',
+    'pics/chaitanya.jpg',
+    'pics/chandana.jpg',
+    'pics/chiluka.jpg',
+    'pics/giri.jpg',
+    'pics/gvk.jpg',
+    'pics/harsha.jpg',
+    'pics/kaveri.jpg',
+    'pics/kunal.jpg',
+    'pics/lohith.jpg',
     
     
     '/offline',
