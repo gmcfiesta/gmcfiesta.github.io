@@ -9,13 +9,12 @@ $url = $_POST['url'];
 $nameto = $_POST['nameto'];
 $batchto = $_POST['batchto'];
 $safe_url = mysqli_real_escape_string($conn, $url);
-$message = $_POST['message']
 $_SESSION['name'] = $name;
 $_SESSION['song'] = $song;
     
     
 $sql = "INSERT INTO dedications (name, batch, song, url, nameto, batchto, message)
-VALUES ('$name', '$batch', '$song', '$safe_url', '$nameto','$batchto', '$message')";
+VALUES ('$name', '$batch', '$song', '$safe_url', '$nameto','$batchto', $message)";
 
 
 
@@ -37,8 +36,8 @@ if ($conn->query($query) === TRUE) {
 }
 */
 
-$dedi = mysqli_insert_id($conn);
-setcookie("dedi", $dedi);
+/*$dedi = mysqli_insert_id($conn);
+setcookie("dedi", $dedi);*/
 
 
  
@@ -47,6 +46,12 @@ $conn->close();
 
 
 ?>
+
+
+
+
+
+
 
 
 
@@ -66,59 +71,23 @@ $conn->close();
 
     <body class=""style="background-color: darkcyan">
     <!-- Sidebar & Nav-->
-    <div class="navbar-fixed ">
-        <nav>
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo center"><img src="images/office.png" width="200px"></a>
-
-
-                
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-          </div>
-      </nav>
-  </div>
+   
     <!--Side bar content-->    
-    <div >
-        
-        <ul id="slide-out" class="side-nav " >
-                <li>
-                    <div class="user-view">
-                    <div class="background">
-                    <img src=" ">
-                    </div>
-                        <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                    </div>
-                </li>
-                 <li><a class="waves-effect  white-text" href="index.html"><i class="material-icons white-text" >home</i><h5>HOME</h5></a></li>
-                <li><a class="waves-effect white-text" href="about.html"><i class="material-icons white-text">album</i><h5>About Fest</h5></a></li>
-                <li><a class="waves-effect white-text" href="organi.html"><i class="material-icons white-text">people</i><h5>Organising Team</h5></a></li>
-                <li><a class="waves-effect white-text" href="audi.html"><i class="material-icons white-text">camera</i><h5>Audi Events</h5></a></li>
-            
-                <li><a class="waves-effect white-text" href="cellar.html"><i class="material-icons white-text">blur_on</i><h5>Cellar Events</h5></a></li>
-                <li><a class="waves-effect white-text" href="sports.html"><i class="material-icons white-text">directions_run</i><h5>Sports</h5></a></li>
-                <li><a class="waves-effect white-text" href="competitions.html"><i class="material-icons white-text">all_inclusive</i><h5>Competitions</h5></a></li>
-                <li><a class="waves-effect white-text" href="fnight.html"><i class="material-icons white-text">cloud</i><h5>Fest Night</h5></a></li><li><a class="waves-effect white-text" href="us.html"><i class="material-icons white-text">people</i><h5>App Developers</h5></a></li>
-
-          </ul>    
-       
-    </div>
+   
   <div class="container">
     <!---------------------------abbey kasai Page Content goes below--------------------->    
    
-
-      
-   
-      
     
-      <div class="card">
       
       
-      
+      <div class="container">
+      <h4 class="center">Your Dedication has been recorded and will be played soon.</h4>    
       
       </div>
       
       
       
+      <marquee>We try our best to execute your dedication perfectly. If u find that it is not the case, please consider issues such as availability etc.</marquee>
       
       
       
@@ -126,19 +95,9 @@ $conn->close();
         
         
         
-        
+        </div>  
     <!----------------------------abbey kasai Page Content goes above--------------------> <!--Floating toolbar-->    
-        <div class="fixed-action-btn toolbar">
-    <a class="btn-floating btn-large red">
-      <i class="large material-icons">home</i>
-    </a>
-    <ul>
-      <li class="waves-effect waves-light"><a href="us.html"><i class="material-icons">people</i></a></li>
-      <li class="waves-effect waves-light"><a href="index.html"><i class="material-icons">home</i></a></li>
-      <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">free_breakfast</i></a></li>
-    </ul>
-  </div>
-     </div>
+       
     <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
