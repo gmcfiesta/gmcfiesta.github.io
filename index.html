@@ -12,17 +12,81 @@
         <!--pwa-->
         <link rel="manifest" href="manifest.json">
         <!---One Signal push--->
-     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-  <script>
+     <script>
+    var useragentid = null;
     var OneSignal = window.OneSignal || [];
     OneSignal.push(["init", {
-      appId: "afe76825-7d4c-4808-a16b-9fe18b4858b1",
-      autoRegister: false,
-      notifyButton: {
-        enable: true /* Set to false to hide */
-      }
+        appId: "afe76825-7d4c-4808-a16b-9fe18b4858b1",
+        autoRegister: false,
+        notifyButton: {
+            enable: false 
+        },
+        persistNotification: false
     }]);
-  </script>
+    //Firstly this will check user id 
+    OneSignal.push(function() {
+        OneSignal.getUserId().then(function(userId) {                
+            if(userId == null){
+                document.getElementById('unsubscribe').style.display = 'none';
+            }
+            else{
+                useragentid = userId;
+                document.getElementById('unsubscribe').style.display = '';
+                OneSignal.push(["getNotificationPermission", function(permission){
+                }]);
+                OneSignal.isPushNotificationsEnabled(function(isEnabled) {
+                    if (isEnabled){
+                        document.getElementById('unsubscribe').style.display = '';
+                        document.getElementById('subscribe').style.display = 'none';
+                    }
+                    else{
+                      document.getElementById('unsubscribe').style.display = 'none';
+                      document.getElementById('subscribe').style.display = '';
+                    }
+                });
+            }
+        });
+    });
+    //Secondly this will check when subscription changed
+    OneSignal.push(function() {
+        OneSignal.on('subscriptionChange', function (isSubscribed) {
+            if(isSubscribed==true){
+                OneSignal.getUserId().then(function(userId) {
+                    useragentid = userId;
+                }).then(function(){
+                 // this is custom function
+                // here you can send post request to php file as well.
+                    OneSignalUserSubscription(useragentid);
+                });
+                document.getElementById('unsubscribe').style.display = '';
+                document.getElementById('subscribe').style.display = 'none';
+            }
+            else if(isSubscribed==false){
+                OneSignal.getUserId().then(function(userId) {
+                    useragentid = userId;
+                });
+                document.getElementById('unsubscribe').style.display = 'none';
+                document.getElementById('subscribe').style.display = '';
+            }
+            else{
+                console.log('Unable to process the request');
+            }
+        });
+    });
+    function subscribeOneSignal(){
+        if(useragentid !=null){
+            OneSignal.setSubscription(true); 
+        }
+        else{
+            OneSignal.registerForPushNotifications({
+                modalPrompt: true
+            });
+        }
+    }
+    function unSubscribeOneSignal(){
+        OneSignal.setSubscription(false);
+    }
+</script>
         <!--------------------------------------->
 
       <!--Let browser know website is optimized for mobile-->
@@ -137,7 +201,8 @@
     <ul>
       <li class="waves-effect waves-light"><a href="us.html"><i class="material-icons">people</i></a></li>
       <li class="waves-effect waves-light"><a href="index.html"><i class="material-icons">home</i></a></li>
-      <li class="waves-effect waves-light"><a href="#!" id="notif" class="btn"><i class="material-icons">notifications</i></a></li>
+      <li class="waves-effect waves-light"><button id="subscribe" class="button" onclick="subscribeOneSignal()">Subscribe </button>
+<button id="unsubscribe" class="button" onclick="unSubscribeOneSignal()">Unsubscribe </button></li>
     </ul>
   </div>
      
