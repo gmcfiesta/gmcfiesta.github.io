@@ -84,6 +84,9 @@ toolbox.precache([
     '/pics/kaveri.jpg',
     '/pics/kunal.jpg',
     '/pics/lohith.jpg',
+    '/pics/praveen.jpg',
+    '/pics/santosh.jpg',
+    '/pics/shanti.jpg',
     
     
     
