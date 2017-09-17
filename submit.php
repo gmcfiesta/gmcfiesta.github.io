@@ -1,3 +1,54 @@
+<?php session_start(); include 'database_connect.php';
+
+
+
+$name = $_POST['name'];
+$batch = $_POST['batch'];
+$song = $_POST['song'];
+$url = $_POST['url'];
+$nameto = $_POST['nameto'];
+$batchto = $_POST['batchto'];
+$safe_url = mysqli_real_escape_string($conn, $url);
+$message = $_POST['message']
+$_SESSION['name'] = $name;
+$_SESSION['song'] = $song;
+    
+    
+$sql = "INSERT INTO dedications (name, batch, song, url, nameto, batchto, message)
+VALUES ('$name', '$batch', '$song', '$safe_url', '$nameto','$batchto', '$message')";
+
+
+
+if ($conn->query($sql) === TRUE) {
+    echo "";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+/*sleep(3);
+
+$query = "SELECT 'key' FROM dedications WHERE name = '{$_SESSION['name']}' AND song = '{$_SESSION['song']}'";
+
+
+if ($conn->query($query) === TRUE) {
+    echo "Your dedication is ($row)in line.";
+} else {
+    echo "<br>Error: " . $query . " serial recovery error" . $conn->error;
+}
+*/
+
+$dedi = mysqli_insert_id($conn);
+setcookie("dedi", $dedi);
+
+
+ 
+$conn->close();
+
+
+
+?>
+
+
 
 <!DOCTYPE html>
   <html>
@@ -40,7 +91,7 @@
                 </li>
                  <li><a class="waves-effect  white-text" href="index.html"><i class="material-icons white-text" >home</i><h5>HOME</h5></a></li>
                 <li><a class="waves-effect white-text" href="about.html"><i class="material-icons white-text">album</i><h5>About Fest</h5></a></li>
-            <li><a class="waves-effect white-text" href="organi.html"><i class="material-icons white-text">people</i><h5>Organising Team</h5></a></li>
+                <li><a class="waves-effect white-text" href="organi.html"><i class="material-icons white-text">people</i><h5>Organising Team</h5></a></li>
                 <li><a class="waves-effect white-text" href="audi.html"><i class="material-icons white-text">camera</i><h5>Audi Events</h5></a></li>
             
                 <li><a class="waves-effect white-text" href="cellar.html"><i class="material-icons white-text">blur_on</i><h5>Cellar Events</h5></a></li>
@@ -52,74 +103,13 @@
        
     </div>
   <div class="container">
-        
     <!---------------------------abbey kasai Page Content goes below--------------------->    
-     
-   <div>  
-       <div class="row center white-text"><h2>DEDICATIONS</h2></div>
-       <div class="divider"></div>
-      
-<!-- Input elements will be put here -->
-    <div class="row">
-    <form id="Form1" action="dedicate.php" method="post" class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="your_name" name="name" type="text" class="validate white-text">
-          <label for="you_name" class="white-text">Your Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="batch" name="batch" type="text" class="validate white-text">
-          <label for="batch"class="white-text">Batch</label>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="input-field col s6 ">
-          <input id="song" name="song" type="text" class="invalidate white-text">
-                    
-                     
-            
-            
-          <label for="song" class="white-text">Song</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="songurl" name="url"  type="text" class="validate white-text">
-          <label for="songurl"class="white-text">URL</label>
-        </div>
-      </div>
-    
-    <div class="row">
-        <div class="input-field col s6">
-          <input id="to_name" name="nameto" type="text" class="validate white-text">
-          <label for="to_name" class="white-text">Dedicated to:</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="to_batch" name="batchto" type="text" class="validate white-text">
-          <label for="to_batch" class="white-text">Batch</label>
-        </div>
-      </div>
-    <div class="row">
-        <div class="input-field col s12">
-          <input id="message" name="message" type="text" class="validate white-text">
-          <label for="message" class="white-text">Message</label>
-        </div>
-        </div>
-        
-      <input type ="submit" class ="btn waves-effect waves-light red center" value = "Submit"/>
-    </form>
-        
-  </div>
-      
+   
+
       
    
-     </div> 
       
-      
-      
-      
-        </div>      
-      
-      
+    
       
       
       
@@ -143,10 +133,12 @@
       <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">free_breakfast</i></a></li>
     </ul>
   </div>
-     
+     </div>
     <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="mytemplate.js"></script>  
+      
+      <script type="text/javascript" src="mytemplate.js"></script> 
+    <script type="text/javascript" src="dedicate.js"></script>
     </body>
   </html>
