@@ -48,7 +48,12 @@
   console.log("Thank you for installing our app!");
             document.getElementById('pl').style.visibility = "hidden";
 }
-        </script>
+   if ( $.browser.safari ) //not fully supported on 1.7 jQuery {
+   document.getElementById('pl').style.visibility = "hidden";
+}
+	    
+	    
+	    </script>
         
         
         
