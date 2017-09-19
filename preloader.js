@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
-	$('.preloader-background').delay(1700).fadeOut('slow');
+	$('.preloader-background').delay(1000).fadeOut('slow');
 	
 	$('.preloader-wrapper')
-		.delay(1700)
+		.delay(1000)
 		.fadeOut();
 });
