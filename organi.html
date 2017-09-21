@@ -18,7 +18,7 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <!--import mytemplate.css----->
         <link href="mytemplate.css" rel="stylesheet">
-	     <link href="organi.css" rel="stylesheet">
+	    
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
@@ -74,6 +74,58 @@
               <ul>
                   <li><a><h3>The Batch Of 2k13</h3></a></li>
                  <li><img src="/rsc/13.png" width="300px" id="13logo"></img></li>
+		  <style>
+		  
+		  #13logo {
+   -webkit-animation-name: spinner; 
+  -webkit-animation-timing-function: linear; 
+  -webkit-animation-iteration-count: infinite; 
+  -webkit-animation-duration: 2s; 
+  animation-name: spinner; 
+  animation-timing-function: linear; 
+  animation-iteration-count: infinite; 
+  animation-duration: 2s; 
+  -webkit-transform-style: preserve-3d; 
+  -moz-transform-style: preserve-3d; 
+  -ms-transform-style: preserve-3d; 
+  transform-style: preserve-3d;
+}
+
+
+/* WebKit and Opera browsers */ 
+@-webkit-keyframes spinner { 
+  from 
+  { 
+    -webkit-transform: rotateY(0deg); 
+  } 
+  to { 
+    -webkit-transform: rotateY(-360deg); 
+  } 
+} 
+/* all other browsers */ 
+@keyframes spinner { 
+   from { 
+    -moz-transform: rotateY(0deg); 
+    -ms-transform: rotateY(0deg); 
+    transform: rotateY(0deg); 
+   } 
+   to 
+   { 
+    -moz-transform: rotateY(-360deg); 
+    -ms-transform: rotateY(-360deg); 
+    transform: rotateY(-360deg); 
+
+   } 
+}
+
+
+		  
+		  
+		  
+		  
+		  
+		  
+		  </style>
                 
                 </ul>
             </div>
