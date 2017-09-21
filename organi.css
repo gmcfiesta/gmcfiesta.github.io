@@ -1,18 +1,15 @@
-#13logo {
-
-    -webkit-animation: all 1.2s linear infinite;
-
-}
-    
-
-    
-
-
-
-@-webkit-keyframes all
+#13logo 
 {
+    -webkit-animation: anim 10s infinite linear;
+    animation: anim 10s infinite linear;
+}
 
-0%   {-webkit-transform: rotateY(0deg);}
-100%    {-webkit-transform: rotateY(720deg);}
+@-webkit-keyframes anim {
+    from {-webkit-transform: rotateY(0deg);}
+    to {-webkit-transform: rotateY(360deg);}
+}
 
+@keyframes anim {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
 }
