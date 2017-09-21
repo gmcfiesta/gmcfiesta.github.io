@@ -1,5 +1,4 @@
-#13logo 
-{
+#13logo{
     -webkit-animation: anim 10s infinite linear;
     animation: anim 10s infinite linear;
 }
@@ -13,3 +12,4 @@
     from {transform: rotateY(0deg);}
     to {transform: rotateY(360deg);}
 }
+
