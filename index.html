@@ -42,36 +42,9 @@
 
     <body class="" style="background-color: darkcyan">
         
-<!----------->
+<!--------------------------------------Allow only added to homescreen people----->
         
         
-        <div class="preloader-background" id="pl">
- -	
- -		
-            <div class="container" style="background-color: transparent">
-              <div class="card white-text center">
- -                <div><ul class="center"><li><h5>The fest is dedicated to</h5></li><li><h5> Dear G. Saisri.</h5></li></ul>
-                    <div class="col s6"></div>
-                    <div class="col s6"></div>
-                 
- -                </div>
- -                    </div>    
- -        </div>
-        </div>
-
-        <script>
-            
-        if (window.matchMedia('(display-mode: standalone)').matches) {
-  console.log("Thank you for installing our app!");
-            document.getElementById('pl').style.visibility = "hidden";
-}
-   var is_safari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 &&  navigator.userAgent.indexOf('Android') == -1;
-  if (is_safari) {
-   document.getElementById('pl').style.visibility = "hidden";
-  }
-	    
-	    
-	    </script>
         
         
         
@@ -127,22 +100,38 @@
     <!---------------------------abbey kasai Page Content goes below--------------------->    
      
       
-     <div style="overflow:hidden">
-             <div class="carousel center" data-indicators="true">
-        <div class="carousel-item" width="300" href="#one!"><img src="/pix/pic1.jpg">
+     <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
         </div>
-      <div class="carousel-item " width="300" href="#one!"><img src="/9.jpg">
-       </div>
-		     <div class="carousel-item " width="300" href="#one!"><img src="/pix/11.jpg">
-       </div>
-		       <div class="carousel-item " width="300" href="#one!"><img src="/pix/12.jpg">
-       </div>
-		       <div class="carousel-item " width="300" href="#one!"><img src="/pix/13.jpg">
-       </div>
-		     
-         </div>
-
-     </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
    
       <ul >
         <li class="center">The fest is dedicated to Dear G.Saisri.</li>
@@ -165,11 +154,7 @@
       
       
       
-         </div>
-      
-      
-        </div>   
-		   
+         
         
         
         
