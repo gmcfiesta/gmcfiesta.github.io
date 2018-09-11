@@ -21,7 +21,7 @@
         <link type="text/css" rel="stylesheet" href="css/animate.css"  media="screen,projection"/>
         <link href="css/particles.css" rel="stylesheet">
         <!--pwa-->
-        <link rel="manifest" href="manifest.json">
+        <!--<link rel="manifest" href="manifest.json">-->
         <!---One Signal push--->
 	    
         <!--------------------------------------->
@@ -35,16 +35,19 @@
     </head>
 
     <body class="">
-        
+        <div id="particles-js"></div>
 <!--------------------------------------Allow only added to homescreen people----->
-               
-        <div id="particles-js">
-        
-            
-            <h1 class="animated fadeIn center-align">All The Best Everybody!!!</h1>
-           <div class="ddd"><a class="waves-effect waves-light btn" href="https://www.facebook.com/GMC-Fiesta-642885692485429/">Solasta Pics</a>
+        <div class="container">       
+            <div class="row">
+                <div class="col s12 offset-2"><a class="waves-effect waves-light btn" href="">Solasta Pics</a></div>
+            </div>
+            <div class="video">
+                <div class="col s10 offset=1"><iframe width=100% height=100% src="https://www.youtube.com/embed/TixeAF1e2kE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                
+                
             </div>
         </div>
+        
 
 
         
@@ -62,11 +65,11 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script type="text/javascript" src="js/particles.js"></script>
         
-        
-        <script>if ('serviceWorker' in navigator) {
+    <!--PWA------>    
+    <!--<script>if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/OneSignalSDKWorker.js').then(function(registration) {
       // Registration was successful
@@ -76,7 +79,7 @@
       console.log('ServiceWorker registration failed: ', err);
     });
   });
-}</script>
+}</script>-->
         
         
 

@@ -1,42 +1,10 @@
-/* ---- reset ---- */
-@font-face {
-    font-family: br;
-    src: url(/fonts/born/br.ttf);
-    font-weight: bold;
-    
+.my-wrapper {
+  height: 100%;
 }
-
-h1{
-    font-family: br;
-    color: white;
-    position: fixed;
-    top: 50%;
-	left: 25%;
-	margin-top: -100px;
-	margin-left:-100px;
-}
-
 
 body {
-  margin: 0;
   background-color: #17182f;
 }
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-
-#ddd {
-    position: fixed;
-    bottom: auto;
-	left: 25%;
-	margin-top: -100px;
-	margin-left:-100px; 
-}
-
-/* ---- particles.js container ---- */
 
 #particles-js {
   position: absolute;
@@ -44,3 +12,9 @@ canvas {
   height: 100%;
 }
 
+video {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) }
+}
